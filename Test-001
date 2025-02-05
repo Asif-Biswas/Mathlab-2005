@@ -1,0 +1,12 @@
+(* Define matrix A and vector B *)
+A = {{4, 1, -1}, {2, 7, 1}, {1, -3, 12}};
+B = {9, 19, 31};
+
+(* LU Decomposition *)
+{L, U} = LUDecomposition[A];
+
+(* Solve for X *)
+X = LinearSolve[A, B];
+
+(* Display results *)
+TableForm[{{"L Matrix", L}, {"U Matrix", U}, {"Solution", X}}]
