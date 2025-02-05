@@ -1,0 +1,11 @@
+(* Define function *)
+f[x_] := x^2 Sin[x]
+
+(* Compute Romberg integration *)
+rombergResult = NIntegrate[f[x], {x, 0, Pi/4}, Method -> "DoubleExponential"]
+
+(* Compare with exact value *)
+exactValue = 0.0887553;
+
+(* Show results in tabular form *)
+TableForm[{{"Method", "Result"}, {"Romberg", rombergResult}, {"Exact", exactValue}}]
